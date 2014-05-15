@@ -258,6 +258,8 @@ public class AppOpsManager {
     /** @hide */
     public static final int OP_BOOT_COMPLETED = 66;
     /** @hide */
+    public static final int OP_NFC_CHANGE = 67;
+    /** @hide */
     public static final int OP_SU = 69;
     /** @hide */
     public static final int _NUM_OP = 70;
@@ -365,6 +367,8 @@ public class AppOpsManager {
             "android:bluetooth_change";
     private static final String OPSTR_BOOT_COMPLETED =
             "android:boot_completed";
+    private static final String OPSTR_NFC_CHANGE =
+            "android:nfc_change";
     private static final String OPSTR_SU =
             "android:su";
 
@@ -481,7 +485,7 @@ public class AppOpsManager {
             OP_CHANGE_WIFI_STATE,
             OP_BLUETOOTH_CHANGE,
             OP_BOOT_COMPLETED,
-            OP_NONE,
+            OP_NFC_CHANGE,
             OP_NONE,
             OP_SU
     };
@@ -558,7 +562,7 @@ public class AppOpsManager {
             OPSTR_WIFI_CHANGE,
             OPSTR_BLUETOOTH_CHANGE,
             OPSTR_BOOT_COMPLETED,
-            null,
+            OPSTR_NFC_CHANGE,
             null,
             OPSTR_SU,
     };
@@ -635,7 +639,7 @@ public class AppOpsManager {
             "WIFI_CHANGE",
             "BLUETOOTH_CHANGE",
             "BOOT_COMPLETED",
-            null,
+            "NFC_CHANGE",
             null,
             "SU",
     };
@@ -712,7 +716,7 @@ public class AppOpsManager {
             Manifest.permission.CHANGE_WIFI_STATE,
             Manifest.permission.BLUETOOTH,
             Manifest.permission.RECEIVE_BOOT_COMPLETED,
-            null,
+            Manifest.permission.NFC,
             null,
             null,
     };
@@ -790,7 +794,7 @@ public class AppOpsManager {
             null, //WIFI_CHANGE
             null, //BLUETOOTH_CHANGE
             null, //BOOT_COMPLETED
-            null,
+            null, //NFC_CHANGE
             null,
             UserManager.DISALLOW_SU, //SU TODO: this should really be investigated.
     };
@@ -867,7 +871,7 @@ public class AppOpsManager {
             false, // WIFI_CHANGE
             false, // BLUETOOTH_CHANGE
             false, // BOOT_COMPLETED
-            false,
+            false, // NFC_CHANGE
             false,
             false, //SU
     };
@@ -943,7 +947,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ALLOWED, // OP_CHANGE_WIFI_STATE
             AppOpsManager.MODE_ASK,     // OP_BLUETOOTH_CHANGE
             AppOpsManager.MODE_ALLOWED, // OP_BOOT_COMPLETED
-            AppOpsManager.MODE_IGNORED,
+            AppOpsManager.MODE_ALLOWED, // OP_NFC_CHANGE
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_ASK, // OP_SU
     };
@@ -1020,7 +1024,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ASK,     // OP_CHANGE_WIFI_STATE
             AppOpsManager.MODE_ASK,     // OP_BLUETOOTH_CHANGE
             AppOpsManager.MODE_ALLOWED, // OP_BOOT_COMPLETED
-            AppOpsManager.MODE_IGNORED,
+            AppOpsManager.MODE_ASK,     // OP_NFC_CHANGE
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_ASK,     // OP_SU
     };
@@ -1096,7 +1100,7 @@ public class AppOpsManager {
         true,     // OP_CHANGE_WIFI_STATE
         true,     // OP_BLUETOOTH_CHANGE
         false,    // OP_BOOT_COMPLETED
-        false,
+        true,     // OP_NFC_CHANGE
         false,
         true,     // OP_SU
     };
@@ -1176,7 +1180,7 @@ public class AppOpsManager {
             false,     // OP_CHANGE_WIFI_STATE
             false,     // OP_BLUETOOTH_CHANGE
             false,     // OP_BOOT_COMPLETED
-            false,
+            false,     // OP_NFC_CHANGE
             false,
             false,     // OP_SU
     };
