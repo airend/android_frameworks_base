@@ -50,4 +50,5 @@ interface IAppOpsService {
     void removeUser(int userHandle);
 
     boolean isOperationActive(int code, int uid, String packageName);
+    boolean isControlAllowed(int code, String packageName);
 }
