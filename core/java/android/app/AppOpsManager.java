@@ -251,6 +251,8 @@ public class AppOpsManager {
     public static final int OP_GET_ACCOUNTS = 62;
     /** @hide Control whether an application is allowed to run in the background. */
     public static final int OP_RUN_IN_BACKGROUND = 63;
+    /** @hide Wifi state change **/
+    public static final int OP_CHANGE_WIFI_STATE = 64;
     /** @hide */
     public static final int OP_SU = 69;
     /** @hide */
@@ -353,6 +355,8 @@ public class AppOpsManager {
     public static final String OPSTR_GET_ACCOUNTS
             = "android:get_accounts";
     /** @hide **/
+    private static final String OPSTR_WIFI_CHANGE =
+            "android:wifi_change";
     private static final String OPSTR_SU =
             "android:su";
 
@@ -466,7 +470,7 @@ public class AppOpsManager {
             OP_TURN_SCREEN_ON,
             OP_GET_ACCOUNTS,
             OP_RUN_IN_BACKGROUND,
-            OP_NONE,
+            OP_CHANGE_WIFI_STATE,
             OP_NONE,
             OP_NONE,
             OP_NONE,
@@ -543,7 +547,7 @@ public class AppOpsManager {
             null,
             OPSTR_GET_ACCOUNTS,
             null,
-            null,
+            OPSTR_WIFI_CHANGE,
             null,
             null,
             null,
@@ -620,7 +624,7 @@ public class AppOpsManager {
             "TURN_ON_SCREEN",
             "GET_ACCOUNTS",
             "RUN_IN_BACKGROUND",
-            null,
+            "WIFI_CHANGE",
             null,
             null,
             null,
@@ -697,7 +701,7 @@ public class AppOpsManager {
             null, // no permission for turning the screen on
             Manifest.permission.GET_ACCOUNTS,
             null, // no permission for running in background
-            null,
+            Manifest.permission.CHANGE_WIFI_STATE,
             null,
             null,
             null,
@@ -775,7 +779,7 @@ public class AppOpsManager {
             null, // TURN_ON_SCREEN
             null, // GET_ACCOUNTS
             null, // RUN_IN_BACKGROUND
-            null,
+            null, //WIFI_CHANGE
             null,
             null,
             null,
@@ -852,7 +856,7 @@ public class AppOpsManager {
             false, // TURN_ON_SCREEN
             false, // GET_ACCOUNTS
             false, // RUN_IN_BACKGROUND
-            false,
+            false, // WIFI_CHANGE
             false,
             false,
             false,
@@ -928,7 +932,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ALLOWED,  // OP_TURN_ON_SCREEN
             AppOpsManager.MODE_ALLOWED,
             AppOpsManager.MODE_ALLOWED,  // OP_RUN_IN_BACKGROUND
-            AppOpsManager.MODE_IGNORED,
+            AppOpsManager.MODE_ALLOWED, // OP_CHANGE_WIFI_STATE
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
@@ -1005,7 +1009,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ALLOWED, // OP_TURN_ON_SCREEN
             AppOpsManager.MODE_ALLOWED, // OP_GET_ACCOUNTS
             AppOpsManager.MODE_ALLOWED, // MODE_RUN_IN_BACKGROUND
-            AppOpsManager.MODE_IGNORED,
+            AppOpsManager.MODE_ASK,     // OP_CHANGE_WIFI_STATE
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
@@ -1081,7 +1085,7 @@ public class AppOpsManager {
         false,    // TURN_ON_SCREEN
         false,    // GET_ACCOUNTS
         false,    // RUN_IN_BACKGROUND
-        false,
+        true,     // OP_CHANGE_WIFI_STATE
         false,
         false,
         false,
@@ -1161,7 +1165,7 @@ public class AppOpsManager {
             false,
             false,
             false,
-            false,
+            false,     // OP_CHANGE_WIFI_STATE
             false,
             false,
             false,
