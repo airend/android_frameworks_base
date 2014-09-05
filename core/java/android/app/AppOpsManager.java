@@ -254,6 +254,8 @@ public class AppOpsManager {
     /** @hide Wifi state change **/
     public static final int OP_CHANGE_WIFI_STATE = 64;
     /** @hide */
+    public static final int OP_BLUETOOTH_CHANGE = 65;
+    /** @hide */
     public static final int OP_SU = 69;
     /** @hide */
     public static final int _NUM_OP = 70;
@@ -357,6 +359,8 @@ public class AppOpsManager {
     /** @hide **/
     private static final String OPSTR_WIFI_CHANGE =
             "android:wifi_change";
+    private static final String OPSTR_BLUETOOTH_CHANGE =
+            "android:bluetooth_change";
     private static final String OPSTR_SU =
             "android:su";
 
@@ -471,7 +475,7 @@ public class AppOpsManager {
             OP_GET_ACCOUNTS,
             OP_RUN_IN_BACKGROUND,
             OP_CHANGE_WIFI_STATE,
-            OP_NONE,
+            OP_BLUETOOTH_CHANGE,
             OP_NONE,
             OP_NONE,
             OP_NONE,
@@ -548,7 +552,7 @@ public class AppOpsManager {
             OPSTR_GET_ACCOUNTS,
             null,
             OPSTR_WIFI_CHANGE,
-            null,
+            OPSTR_BLUETOOTH_CHANGE,
             null,
             null,
             null,
@@ -625,7 +629,7 @@ public class AppOpsManager {
             "GET_ACCOUNTS",
             "RUN_IN_BACKGROUND",
             "WIFI_CHANGE",
-            null,
+            "BLUETOOTH_CHANGE",
             null,
             null,
             null,
@@ -702,7 +706,7 @@ public class AppOpsManager {
             Manifest.permission.GET_ACCOUNTS,
             null, // no permission for running in background
             Manifest.permission.CHANGE_WIFI_STATE,
-            null,
+            Manifest.permission.BLUETOOTH,
             null,
             null,
             null,
@@ -780,7 +784,7 @@ public class AppOpsManager {
             null, // GET_ACCOUNTS
             null, // RUN_IN_BACKGROUND
             null, //WIFI_CHANGE
-            null,
+            null, //BLUETOOTH_CHANGE
             null,
             null,
             null,
@@ -857,7 +861,7 @@ public class AppOpsManager {
             false, // GET_ACCOUNTS
             false, // RUN_IN_BACKGROUND
             false, // WIFI_CHANGE
-            false,
+            false, // BLUETOOTH_CHANGE
             false,
             false,
             false,
@@ -933,7 +937,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ALLOWED,
             AppOpsManager.MODE_ALLOWED,  // OP_RUN_IN_BACKGROUND
             AppOpsManager.MODE_ALLOWED, // OP_CHANGE_WIFI_STATE
-            AppOpsManager.MODE_IGNORED,
+            AppOpsManager.MODE_ASK,     // OP_BLUETOOTH_CHANGE
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
@@ -1010,7 +1014,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ALLOWED, // OP_GET_ACCOUNTS
             AppOpsManager.MODE_ALLOWED, // MODE_RUN_IN_BACKGROUND
             AppOpsManager.MODE_ASK,     // OP_CHANGE_WIFI_STATE
-            AppOpsManager.MODE_IGNORED,
+            AppOpsManager.MODE_ASK,     // OP_BLUETOOTH_CHANGE
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
             AppOpsManager.MODE_IGNORED,
@@ -1086,7 +1090,7 @@ public class AppOpsManager {
         false,    // GET_ACCOUNTS
         false,    // RUN_IN_BACKGROUND
         true,     // OP_CHANGE_WIFI_STATE
-        false,
+        true,     // OP_BLUETOOTH_CHANGE
         false,
         false,
         false,
@@ -1166,7 +1170,7 @@ public class AppOpsManager {
             false,
             false,
             false,     // OP_CHANGE_WIFI_STATE
-            false,
+            false,     // OP_BLUETOOTH_CHANGE
             false,
             false,
             false,
