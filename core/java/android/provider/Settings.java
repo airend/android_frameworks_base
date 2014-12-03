@@ -3241,6 +3241,13 @@ public final class Settings {
         public static final String VOLUME_MASTER = "volume_master";
 
         /**
+         * Whether to wake the screen with the volume keys, the value is boolean.
+         *
+         * @hide
+         */
+        public static final String VOLUME_WAKE_SCREEN = "volume_wake_screen";
+
+        /**
          * Master mono (int 1 = mono, 0 = normal).
          *
          * @hide
