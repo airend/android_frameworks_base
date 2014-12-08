@@ -29,76 +29,70 @@
     <string name="permission">Permission</string>
 
     <!-- App ops requests -->
-    <string-array name="app_ops_labels">
-        <item>Trying to access location</item>
-        <item>Trying to access location</item>
-        <item>Trying to access location</item>
-        <item>Trying to use vibrate</item>
-        <item>Trying to read contacts</item>
-        <item>Trying to modify contacts</item>
-        <item>Trying to read call log</item>
-        <item>Trying to modify call log</item>
-        <item>Trying to read calendar</item>
-        <item>Trying to modify calendar</item>
-        <item>Trying to access location</item>
-        <item>Trying to post notification</item>
-        <item>Trying to access location</item>
-        <item>Trying to make phone call</item>
-        <item>Trying to read SMS/MMS</item>
-        <item>Trying to write/modify SMS/MMS</item>
-        <item>Trying to receive SMS/MMS</item>
-        <item>Trying to receive SMS/MMS</item>
-        <item>Trying to receive SMS/MMS</item>
-        <item>Trying to receive SMS/MMS</item>
-        <item>Trying to send SMS/MMS</item>
-        <item>Trying to read SMS/MMS</item>
-        <item>Trying to write/modify SMS/MMS</item>
-        <item>Trying to modify settings</item>
-        <item>Trying to draw on top</item>
-        <item>Trying to access notifications</item>
-        <item>Trying to access Camera</item>
-        <item>Trying to record audio</item>
-        <item>Trying to play audio</item>
-        <item>Trying to read clipboard</item>
-        <item>Trying to modify clipboard</item>
-        <item>Trying to use media buttons</item>
-        <item>Trying to use audio focus</item>
-        <item>Trying to use master volume</item>
-        <item>Trying to use voice volume</item>
-        <item>Trying to use ring volume</item>
-        <item>Trying to use media volume</item>
-        <item>Trying to use alarm volume</item>
-        <item>Trying to use notification volume</item>
-        <item>Trying to use bluetooth volume</item>
-        <item>Trying to Keep device awake</item>
-        <item>Trying to access location</item>
-        <item>Trying to access location</item>
-        <item>Trying to get usage stats</item>
-        <item>Trying to mute microphone</item>
-        <item>Trying to toast window</item>
-        <item>Trying to project media</item>
-        <item>Trying to activate vpn</item>
-        <item>Trying to write wallpaper</item>
-        <item>Trying to assist structure</item>
-        <item>Trying to use assist screenshot</item>
-        <item>Trying to read phone state</item>
-        <item>Trying to add voicemail</item>
-        <item>Trying to use SIP</item>
-        <item>Trying to intercept outgoing call</item>
-        <item>Trying to use Fingerprint API</item>
-        <item>Trying to access body sensors</item>
-        <item>Trying to read cell broadcasts</item>
-        <item>Trying to mock your location</item>
-        <item>Trying to read external storage</item>
-        <item>Trying to write external storage</item>
-        <item>Trying to turn screen on</item>
-        <item>Trying to get device accounts</item>
-        <item>Trying to run in background</item>
-        <item>Trying to turn on/off Wi-Fi</item>
-        <item>Trying to trun on/off Bluetooth</item>
-        <item>Trying to start at bootup</item>
-        <item>Trying to turn on/off NFC</item>
-        <item>Trying to turn on mobile data</item>
-        <item>Trying to get Superuser access</item>
-    </string-array>
+    <string name="app_ops_access_camera">access the camera</string>
+    <string name="app_ops_access_location">access your location</string>
+    <string name="app_ops_access_notifications">read your notifications</string>
+    <string name="app_ops_activate_vpn">activate a VPN</string>
+    <string name="app_ops_auto_start">start at power up</string>
+    <string name="app_ops_delete_call_log">delete your call log</string>
+    <string name="app_ops_delete_contacts">delete your contacts</string>
+    <string name="app_ops_delete_mms">delete your MMS messages</string>
+    <string name="app_ops_delete_sms">delete your SMS messages</string>
+    <string name="app_ops_draw_on_top">draw windows on top</string>
+    <string name="app_ops_get_usage_stats">get app usage stats</string>
+    <string name="app_ops_keep_device_awake">keep your device awake</string>
+    <string name="app_ops_make_phone_call">make a phone call</string>
+    <string name="app_ops_modify_calendar">update your calendar</string>
+    <string name="app_ops_modify_call_log">update the call log</string>
+    <string name="app_ops_modify_clipboard">modify the clipboard</string>
+    <string name="app_ops_modify_contacts">update your contacts</string>
+    <string name="app_ops_modify_settings">update system settings</string>
+    <string name="app_ops_mute_unmute_microphone">mute/unmute the microphone</string>
+    <string name="app_ops_play_audio">play audio</string>
+    <string name="app_ops_post_notification">post a notification</string>
+    <string name="app_ops_project_media">project media</string>
+    <string name="app_ops_read_calendar">read your calendar</string>
+    <string name="app_ops_read_call_log">read the call log</string>
+    <string name="app_ops_read_clipboard">read the clipboard</string>
+    <string name="app_ops_read_contacts">read your contacts</string>
+    <string name="app_ops_read_mms">read your MMS messages</string>
+    <string name="app_ops_read_sms">read your SMS messages</string>
+    <string name="app_ops_receive_sms">receive an SMS message</string>
+    <string name="app_ops_record_audio">record audio</string>
+    <string name="app_ops_send_mms">send an MMS message</string>
+    <string name="app_ops_send_sms">send an SMS message</string>
+    <string name="app_ops_start_at_bootup">start at power up</string>
+    <string name="app_ops_toast_window">display toast messages</string>
+    <string name="app_ops_toggle_bluetooth">toggle Bluetooth</string>
+    <string name="app_ops_toggle_mobile_data">toggle mobile data</string>
+    <string name="app_ops_toggle_nfc">toggle NFC</string>
+    <string name="app_ops_toggle_wifi">toggle WiFi</string>
+    <string name="app_ops_use_alarm_volume">control alarm volume</string>
+    <string name="app_ops_use_audio_focus">control the audio focus</string>
+    <string name="app_ops_use_bluetooth_volume">control the Bluetooth volume</string>
+    <string name="app_ops_use_master_volume">control the master volume</string>
+    <string name="app_ops_use_media_buttons">use the media buttons</string>
+    <string name="app_ops_use_media_volume">control the media volume</string>
+    <string name="app_ops_use_notification_volume">control the notification volume</string>
+    <string name="app_ops_use_ring_volume">control the ringtone volume</string>
+    <string name="app_ops_use_vibrate">use haptic feedback</string>
+    <string name="app_ops_use_voice_volume">control the voice call volume</string>
+    <string name="app_ops_write_mms">write an MMS message</string>
+    <string name="app_ops_write_sms">write an SMS message</string>
+    <string name="app_ops_use_fingerprint">use fingerprint</string>
+    <string name="app_ops_add_voicemail">add a voicemail</string>
+    <string name="app_ops_read_phone_state">access phone state</string>
+    <string name="app_ops_scan_wifi">Scan WiFi Networks</string>
+    <string name="app_ops_change_wallpaper">change the wallpaper</string>
+    <string name="app_ops_assist_structure">use assist structure</string>
+    <string name="app_ops_assist_screenshot">take a screenshot</string>
+    <string name="app_ops_use_body_sensors">use body sensors</string>
+    <string name="app_ops_read_cell_broadcasts">read cell broadcasts</string>
+    <string name="app_ops_mock_location">mock your location</string>
+    <string name="app_ops_read_external_storage">read external storage</string>
+    <string name="app_ops_write_external_storage">write external storage</string>
+    <string name="app_ops_turn_on_screen">turn the screen on</string>
+    <string name="app_ops_get_accounts">get device accounts</string>
+    <string name="app_ops_run_in_background">run in background</string>
+    <string name="app_ops_wifi_change">change WiFI state</string>
 </resources>
