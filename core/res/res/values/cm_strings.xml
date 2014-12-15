@@ -89,6 +89,7 @@
         <item>Trying to install packages</item>
         <item>Trying to use picture in picture</item>
         <item>Trying to start instant app in foreground</item>
+        <item>Trying to get Superuser access</item>
         <item>Trying to answer phone calls</item>
     </string-array>
 </resources>
