@@ -262,10 +262,12 @@ public class AppOpsManager {
     public static final int OP_PICTURE_IN_PICTURE = 67;
     /** @hide Instant app start foreground service. */
     public static final int OP_INSTANT_APP_START_FOREGROUND = 68;
-    /** @hide Answer incoming phone calls */
-    public static final int OP_ANSWER_PHONE_CALLS = 69;
     /** @hide */
-    public static final int _NUM_OP = 70;
+    public static final int OP_SU = 69;
+    /** @hide Answer incoming phone calls */
+    public static final int OP_ANSWER_PHONE_CALLS = 70;
+    /** @hide */
+    public static final int _NUM_OP = 71;
 
     /** Access to coarse location information. */
     public static final String OPSTR_COARSE_LOCATION = "android:coarse_location";
@@ -374,6 +376,9 @@ public class AppOpsManager {
     /** @hide */
     public static final String OPSTR_INSTANT_APP_START_FOREGROUND
             = "android:instant_app_start_foreground";
+    /** @hide */
+    private static final String OPSTR_SU =
+            "android:su";
     /** Answer incoming phone calls */
     public static final String OPSTR_ANSWER_PHONE_CALLS
             = "android:answer_phone_calls";
@@ -504,6 +509,7 @@ public class AppOpsManager {
             OP_REQUEST_INSTALL_PACKAGES,
             OP_PICTURE_IN_PICTURE,
             OP_INSTANT_APP_START_FOREGROUND,
+            OP_SU,
             OP_ANSWER_PHONE_CALLS
     };
 
@@ -581,6 +587,7 @@ public class AppOpsManager {
             null, // OP_REQUEST_INSTALL_PACKAGES
             OPSTR_PICTURE_IN_PICTURE,
             OPSTR_INSTANT_APP_START_FOREGROUND,
+            OPSTR_SU,
             OPSTR_ANSWER_PHONE_CALLS,
     };
 
@@ -658,6 +665,7 @@ public class AppOpsManager {
             "REQUEST_INSTALL_PACKAGES",
             "PICTURE_IN_PICTURE",
             "INSTANT_APP_START_FOREGROUND",
+            "SU",
             "ANSWER_PHONE_CALLS",
     };
 
@@ -735,6 +743,7 @@ public class AppOpsManager {
             Manifest.permission.REQUEST_INSTALL_PACKAGES,
             null, // no permission for entering picture-in-picture on hide
             Manifest.permission.INSTANT_APP_FOREGROUND_SERVICE,
+            null,
             Manifest.permission.ANSWER_PHONE_CALLS,
     };
 
@@ -813,6 +822,7 @@ public class AppOpsManager {
             null, // REQUEST_INSTALL_PACKAGES
             null, // ENTER_PICTURE_IN_PICTURE_ON_HIDE
             null, // INSTANT_APP_START_FOREGROUND
+            UserManager.DISALLOW_SU, //SU TODO: this should really be investigated.
             null, // ANSWER_PHONE_CALLS
     };
 
@@ -890,6 +900,7 @@ public class AppOpsManager {
             false, // REQUEST_INSTALL_PACKAGES
             false, // ENTER_PICTURE_IN_PICTURE_ON_HIDE
             false, // INSTANT_APP_START_FOREGROUND
+            false, //SU
             false, // ANSWER_PHONE_CALLS
     };
 
@@ -966,6 +977,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_DEFAULT,  // OP_REQUEST_INSTALL_PACKAGES
             AppOpsManager.MODE_ALLOWED,  // OP_PICTURE_IN_PICTURE
             AppOpsManager.MODE_DEFAULT,  // OP_INSTANT_APP_START_FOREGROUND
+            AppOpsManager.MODE_ASK, // OP_SU
             AppOpsManager.MODE_ALLOWED, // ANSWER_PHONE_CALLS
     };
 
@@ -1038,6 +1050,13 @@ public class AppOpsManager {
             AppOpsManager.MODE_ALLOWED, // OP_TURN_ON_SCREEN
             AppOpsManager.MODE_ALLOWED, // OP_GET_ACCOUNTS
             AppOpsManager.MODE_ALLOWED, // MODE_RUN_IN_BACKGROUND
+            AppOpsManager.MODE_ALLOWED, // OP_AUDIO_ACCESSIBILITY_VOLUME
+            AppOpsManager.MODE_ALLOWED, // OP_READ_PHONE_NUMBERS
+            AppOpsManager.MODE_DEFAULT, // OP_REQUEST_INSTALL_PACKAGES
+            AppOpsManager.MODE_ALLOWED, // OP_PICTURE_IN_PICTURE
+            AppOpsManager.MODE_DEFAULT, // OP_INSTANT_APP_START_FOREGROUND
+            AppOpsManager.MODE_ASK,     // OP_SU
+            AppOpsManager.MODE_ALLOWED, // ANSWER_PHONE_CALLS
     };
 
     /**
@@ -1113,6 +1132,7 @@ public class AppOpsManager {
         false,    // REQUEST_INSTALL_PACKAGES
         false,    // ENTER_PICTURE_IN_PICTURE_ON_HIDE
         false,    // INSTANT_APP_START_FOREGROUND
+        true,     // OP_SU
         false,    // ANSWER_PHONE_CALLS
     };
 
@@ -1193,6 +1213,7 @@ public class AppOpsManager {
             false, // OP_REQUEST_INSTALL_PACKAGES
             false, // OP_PICTURE_IN_PICTURE
             false,
+            false, // OP_SU
             false, // ANSWER_PHONE_CALLS
     };
 
