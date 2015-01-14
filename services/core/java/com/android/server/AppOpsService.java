@@ -134,6 +134,15 @@ public class AppOpsService extends IAppOpsService.Stub {
      */
     private final ArrayMap<IBinder, ClientRestrictionState> mOpUserRestrictions = new ArrayMap<>();
 
+    private Runnable mSuSessionChangedRunner = new Runnable() {
+        @Override
+        public void run() {
+            mContext.sendBroadcastAsUser(new Intent(AppOpsManager.ACTION_SU_SESSION_CHANGED),
+                    UserHandle.ALL);
+        }
+    };
+
+
     private static final class UidState {
         public final int uid;
         public ArrayMap<String, Ops> pkgOps;
@@ -2753,7 +2762,7 @@ public class AppOpsService extends IAppOpsService.Stub {
     private void broadcastOpIfNeeded(int op) {
         switch (op) {
             case AppOpsManager.OP_SU:
-                mContext.sendBroadcast(new Intent(AppOpsManager.ACTION_SU_SESSION_CHANGED));
+                mHandler.post(mSuSessionChangedRunner);
                 break;
             default:
                 break;
