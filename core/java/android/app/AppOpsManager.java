@@ -722,7 +722,7 @@ public class AppOpsManager {
             Manifest.permission.GET_ACCOUNTS,
             null, // no permission for running in background
             Manifest.permission.CHANGE_WIFI_STATE,
-            Manifest.permission.BLUETOOTH,
+            null,
             Manifest.permission.RECEIVE_BOOT_COMPLETED,
             Manifest.permission.NFC,
             Manifest.permission.MODIFY_PHONE_STATE,
@@ -876,11 +876,11 @@ public class AppOpsManager {
             false, // TURN_ON_SCREEN
             false, // GET_ACCOUNTS
             false, // RUN_IN_BACKGROUND
-            false, // WIFI_CHANGE
-            false, // BLUETOOTH_CHANGE
-            false, // BOOT_COMPLETED
-            false, // NFC_CHANGE
-            false, //DATA_CONNECT_CHANGE
+            true, // WIFI_CHANGE
+            true, // BLUETOOTH_CHANGE
+            true, // BOOT_COMPLETED
+            true, // NFC_CHANGE
+            true, //DATA_CONNECT_CHANGE
             false, //SU
     };
 
@@ -953,7 +953,7 @@ public class AppOpsManager {
             AppOpsManager.MODE_ALLOWED,
             AppOpsManager.MODE_ALLOWED,  // OP_RUN_IN_BACKGROUND
             AppOpsManager.MODE_ALLOWED, // OP_CHANGE_WIFI_STATE
-            AppOpsManager.MODE_ASK,     // OP_BLUETOOTH_CHANGE
+            AppOpsManager.MODE_ALLOWED,     // OP_BLUETOOTH_CHANGE
             AppOpsManager.MODE_ALLOWED, // OP_BOOT_COMPLETED
             AppOpsManager.MODE_ALLOWED, // OP_NFC_CHANGE
             AppOpsManager.MODE_ALLOWED,
