@@ -16,10 +16,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- We don't want to publish private symbols in android.R as part of the
-         SDK.  Instead, put them here. -->
-    <private-symbols package="com.android.internal" />
-
     <!-- app opps always-ask -->
     <java-symbol type="id" name="permission_text" />
     <java-symbol type="id" name="permission_remember_layout" />
