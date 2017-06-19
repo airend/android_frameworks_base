@@ -649,10 +649,12 @@ static int checkFormat(SkColorType colorType, int format, int type)
         case kIndex_8_SkColorType:
             if (format == GL_PALETTE8_RGBA8_OES)
                 return 0;
+            // FALL THROUGH
         case kN32_SkColorType:
         case kAlpha_8_SkColorType:
             if (type == GL_UNSIGNED_BYTE)
                 return 0;
+            // FALL THROUGH
         case kARGB_4444_SkColorType:
         case kRGB_565_SkColorType:
             switch (type) {
