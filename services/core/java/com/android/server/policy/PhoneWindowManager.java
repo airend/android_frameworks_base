@@ -2483,7 +2483,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             }
 
             mHomeWakeScreen = (Settings.System.getIntForUser(resolver,
-                    Settings.System.HOME_WAKE_SCREEN, 1, UserHandle.USER_CURRENT) == 1);
+                    Settings.System.HOME_WAKE_SCREEN, SystemProperties.getBoolean(
+                    "persist.wm." + Settings.System.HOME_WAKE_SCREEN,
+                    true) ? 1 : 0, UserHandle.USER_CURRENT) == 1);
 
             // Configure wake gesture.
             boolean wakeGestureEnabledSetting = Settings.Secure.getIntForUser(resolver,
